@@ -97,7 +97,7 @@ body {
 }
 
 .page__header {
-    padding: 32px 64px;
+    padding: 18px 64px;
     background-color:  #8bdf80;
     color: white;
     background-image: url(/src/img/main_bg.png);
@@ -106,8 +106,8 @@ body {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     display: flex;
-    padding-bottom: 0;
-    justify-content: center
+    padding-bottom: 15px;
+    justify-content: center;
 }
   
 .page__title {
@@ -258,6 +258,7 @@ body {
 
 .resumePage__subtitle{
     margin-top: 0;
+    font-size: 1.5rem;
 }
 
 .timelines {
@@ -387,6 +388,14 @@ body {
     display: flex;
     justify-content: space-between;
     margin: auto; 
+}
+
+.contactPage__subtitle{
+    font-size: 1.5rem;
+}
+
+.contactPage__subtitle--highlight {
+    color:  #8bdf80;
 }
 
 .contactPage__left h3,

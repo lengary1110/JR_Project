@@ -1,4 +1,4 @@
-let previous = 'BLOG';
+let previous = '';
 let current = 'BLOG';
 
 document.querySelectorAll('.navItem')
