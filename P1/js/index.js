@@ -1,5 +1,5 @@
 let previous = '';
-let current = 'BLOG';
+let current = 'HOME';
 
 document.querySelectorAll('.navItem')
         .forEach(function(element) {
