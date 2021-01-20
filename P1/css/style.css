@@ -12,70 +12,60 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-.container {
+.main .container {
   max-width: 1000px;
   margin: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
-.nav {
+.main .container .navbar {
   padding: 1px 0;
   display: flex;
   align-items: center;
   flex: 0 0 auto;
 }
-
-.nav__left {
+.main .container .navbar .nav__logo {
   flex: 0.5;
   float: left;
 }
-
-.logo {
+.main .container .navbar .nav__logo .logo {
   height: 70px;
   width: 70px;
 }
-
-.nav__right {
-  flex: 0.5;
-  float: right;
-}
-
-.nav__list {
+.main .container .navbar .navbar-nav {
   list-style-type: none;
   margin: 30px;
   padding: 8px;
   overflow: hidden;
   border-radius: 5px;
 }
-
-li {
+.main .container .navbar .navbar-nav li {
   float: left;
   border-radius: 5px;
 }
-
-li a {
+.main .container .navbar .navbar-nav li a {
   border-radius: 5px;
   display: block;
-  color: rgb(65, 64, 64);
+  color: #414040;
   text-align: center;
   font: bold;
   padding: 16px;
   text-decoration: none;
 }
-
-li a:hover {
+.main .container .navbar .navbar-nav li a:hover {
   background-color: #b4e7a0;
   font-weight: 800;
 }
-
-.pages {
+.main .container .pages {
   flex: 1 0 auto;
+  /* homepage section */
+  /* resumePage section */
+  /* servicesPage section */
+  /* blogPage section */
+  /* contactPage section */
 }
-
-.page {
+.main .container .pages .page {
   display: none;
   position: absolute;
   top: 0;
@@ -84,19 +74,12 @@ li a:hover {
   visibility: hidden;
   opacity: 0;
   border-radius: 16px;
-  background: rgb(255, 255, 255);
+  background: white;
   transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  z-index: 10;
   box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
 }
-
-.page--active {
-  display: block;
-  position: relative;
-  visibility: visible;
-  opacity: 1;
-}
-
-.page__header {
+.main .container .pages .page__header {
   padding: 18px 64px;
   background-color: #8bdf80;
   color: white;
@@ -109,22 +92,24 @@ li a:hover {
   padding-bottom: 15px;
   justify-content: center;
 }
-
-.page__title {
+.main .container .pages .page__header__title {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 800;
 }
-
-.page__content {
+.main .container .pages .page__content {
   padding: 32px 64px;
   background-color: white;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
-
-/* homepage section */
-.homepage__header {
+.main .container .pages .page--active {
+  display: block;
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+}
+.main .container .pages .homepage__header {
   padding: 32px 64px;
   background-color: #8bdf80;
   color: white;
@@ -134,54 +119,43 @@ li a:hover {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   display: flex;
-  padding-bottom: 0;
-  align-items: center;
 }
-
-.homepage__portrait {
+.main .container .pages .homepage__header__portrait {
   border-radius: 4px;
   width: 250px;
   height: 250px;
-  margin: 24px 0 -24px;
+  margin: 30px 0px -60px 0px;
   border: 3px solid #eefff2;
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
   transition-property: transform, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
-
-.homepage__portrait:hover {
+.main .container .pages .homepage__header__portrait:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 24px rgba(0, 0, 0, 0.15);
 }
-
-.homepage__title {
-  flex: 0.7;
+.main .container .pages .homepage__header__title {
   display: flex;
+  width: 550px;
   flex-direction: column;
   align-items: center;
-  margin-left: 250px;
 }
-
-.homepage__name {
-  font-size: 2.5rem;
-  font-weight: 800;
+.main .container .pages .homepage__header__title__name {
+  font-size: 3rem;
+  font-weight: 1800;
   margin-bottom: 0px;
 }
-
-.homepage__position {
-  font-size: 1.1rem;
-  margin-top: 8px;
-  text-align: center;
+.main .container .pages .homepage__header__title__positions {
+  margin-bottom: 0px;
+  display: block;
 }
-
-.homepage__socialMediaButtons {
+.main .container .pages .homepage__header__title__socialMediaButtons {
   margin-top: 10px;
   display: flex;
   justify-content: center;
 }
-
-.homepage__socialMediaButton {
+.main .container .pages .homepage__header__title__socialMediaButtons .homepage__socialMediaButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,83 +168,61 @@ li a:hover {
   padding: 8px;
   border-radius: 100%;
 }
-
-.homepage__content {
+.main .container .pages .homepage__content {
   padding-top: 20px;
   display: flex;
   flex-direction: row;
   text-align: justify;
   margin: auto;
 }
-
-.homepage__intro {
+.main .container .pages .homepage__content .homepage__intro {
   justify-content: space-between;
   padding: 25px 80px 25px 10px;
   flex: 50%;
 }
-
-.homepage__contact {
+.main .container .pages .homepage__content .homepage__contact {
   border: 0;
   padding: 80px 0 50px 0;
   flex: 50%;
 }
-
-.homepage__contact dt {
+.main .container .pages .homepage__content .homepage__contact dt {
   float: left;
   text-align: left;
   width: 30%;
   padding-right: 5px;
   padding-left: 20px;
 }
-
-.homepage__contact dd {
+.main .container .pages .homepage__content .homepage__contact dd {
   width: 100%;
   margin: 0;
   justify-content: center;
-  color: rgb(177, 197, 184);
+  color: #b1c5b8;
 }
-
-.footer {
-  display: flex;
-  justify-content: center;
-  flex: 0 0 auto;
-  color: rgb(65, 64, 64);
-  margin-top: 30px;
+.main .container .pages .homepage__content .homepage__contact dd a {
+  color: #70f39e;
 }
-
-.jiangren {
-  color: rgb(93, 219, 77);
-}
-
-/* change to resumePage section */
-.resumePage__top,
-.resumePage__bottom {
+.main .container .pages .resumePage__top,
+.main .container .pages .resumePage__bottom {
   display: flex;
   justify-content: space-between;
   margin: auto;
 }
-
-.resumePage__top,
-.resumePage__bottom > div {
-  flex-basis: calc(50% - 32px);
-}
-
-.resumePage__subtitle {
+.main .container .pages .resumePage__top .resumePage__subtitle,
+.main .container .pages .resumePage__bottom .resumePage__subtitle {
   margin-top: 0;
   font-size: 1.5rem;
 }
-
-.timelines {
+.main .container .pages .resumePage__top .resumePage__subtitle--highlight,
+.main .container .pages .resumePage__bottom .resumePage__subtitle--highlight {
+  color: #8bdf80;
+}
+.main .container .pages .resumePage__top .timelines,
+.main .container .pages .resumePage__bottom .timelines {
   border-left: 2px solid #dadada;
   padding: 8px 0 8px 48px;
 }
-
-.timelines > div {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.timeline {
+.main .container .pages .resumePage__top .timelines .timeline,
+.main .container .pages .resumePage__bottom .timelines .timeline {
   position: relative;
   padding: 16px 20px;
   border-radius: 4px;
@@ -278,8 +230,34 @@ li a:hover {
   border-left: 2px solid #58f100;
   margin-left: -5px;
 }
-
-.timeline::before {
+.main .container .pages .resumePage__top .timelines .timeline .experience__title,
+.main .container .pages .resumePage__bottom .timelines .timeline .experience__title {
+  margin: 0 0 8px;
+}
+.main .container .pages .resumePage__top .timelines .timeline .experience__intro,
+.main .container .pages .resumePage__bottom .timelines .timeline .experience__intro {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+.main .container .pages .resumePage__top .timelines .timeline .experience__intro__year,
+.main .container .pages .resumePage__bottom .timelines .timeline .experience__intro__year {
+  color: #379844;
+}
+.main .container .pages .resumePage__top .timelines .timeline .experience__intro__divider,
+.main .container .pages .resumePage__bottom .timelines .timeline .experience__intro__divider {
+  border-right: 1px solid #dadada;
+}
+.main .container .pages .resumePage__top .timelines .timeline .experience__intro__company,
+.main .container .pages .resumePage__bottom .timelines .timeline .experience__intro__company {
+  color: #49515d;
+  margin-left: 8px;
+}
+.main .container .pages .resumePage__top .timelines .timeline .experience__description,
+.main .container .pages .resumePage__bottom .timelines .timeline .experience__description {
+  line-height: 1.75;
+}
+.main .container .pages .resumePage__top .timelines .timeline::before,
+.main .container .pages .resumePage__bottom .timelines .timeline::before {
   content: "";
   width: 48px;
   border-bottom: 2px solid #58f100;
@@ -287,8 +265,8 @@ li a:hover {
   left: -48px;
   top: 8px;
 }
-
-.timeline::after {
+.main .container .pages .resumePage__top .timelines .timeline::after,
+.main .container .pages .resumePage__bottom .timelines .timeline::after {
   content: "";
   position: absolute;
   left: -52px;
@@ -299,58 +277,52 @@ li a:hover {
   top: 2px;
   background: white;
 }
-
-.experience__title {
-  margin: 0 0 8px;
-  font-weight: bold;
+.main .container .pages .resumePage__top .timelines > div,
+.main .container .pages .resumePage__bottom .timelines > div {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
-
-.experience__intro {
-  font-size: 0.8rem;
-  margin-bottom: 8px;
-}
-
-.experience__year {
-  color: #379844;
-}
-
-.experience__divider {
-  border-right: 1px solid #dadada;
-}
-
-.experience__company {
-  color: #49515d;
-  margin-left: 8px;
-}
-
-.experience__description {
-  line-height: 1.75;
-}
-
-.resumePage__top + .resumePage__bottom {
-  margin-top: 32px;
-}
-
-.resumePage__subtitle--highlight {
-  color: #8bdf80;
-}
-
-.skill {
+.main .container .pages .resumePage__top .skill,
+.main .container .pages .resumePage__bottom .skill {
   margin: 16px 0;
 }
-
-.skill__title {
+.main .container .pages .resumePage__top .skill__title,
+.main .container .pages .resumePage__bottom .skill__title {
   margin: 0 0 8px;
   font-size: 0.8rem;
 }
-
-.skill__level {
+.main .container .pages .resumePage__top .skill__level,
+.main .container .pages .resumePage__bottom .skill__level {
   position: relative;
   height: 16px;
   background-color: rgba(0, 0, 0, 0.1);
 }
-
-.skill__level:after {
+.main .container .pages .resumePage__top .skill__level--webDesign:after,
+.main .container .pages .resumePage__bottom .skill__level--webDesign:after {
+  width: 80%;
+}
+.main .container .pages .resumePage__top .skill__level--graphicDesign:after,
+.main .container .pages .resumePage__bottom .skill__level--graphicDesign:after {
+  width: 70%;
+}
+.main .container .pages .resumePage__top .skill__level--printDesign:after,
+.main .container .pages .resumePage__bottom .skill__level--printDesign:after {
+  width: 75%;
+}
+.main .container .pages .resumePage__top .skill__level--htmlDesign:after,
+.main .container .pages .resumePage__bottom .skill__level--htmlDesign:after {
+  width: 90%;
+}
+.main .container .pages .resumePage__top .skill__level--cssDesign:after,
+.main .container .pages .resumePage__bottom .skill__level--cssDesign:after {
+  width: 85%;
+}
+.main .container .pages .resumePage__top .skill__level--javascriptDesign:after,
+.main .container .pages .resumePage__bottom .skill__level--javascriptDesign:after {
+  width: 70%;
+}
+.main .container .pages .resumePage__top .skill__level:after,
+.main .container .pages .resumePage__bottom .skill__level:after {
   content: "";
   position: absolute;
   left: 0;
@@ -358,76 +330,67 @@ li a:hover {
   bottom: 0;
   background-color: #ffb758;
 }
-
-.skill__level--webDesign:after {
-  width: 80%;
+.main .container .pages .resumePage__top .resumePage__top + .resumePage__bottom,
+.main .container .pages .resumePage__bottom .resumePage__top + .resumePage__bottom {
+  margin-top: 32px;
 }
-
-.skill__level--graphicDesign:after {
-  width: 70%;
+.main .container .pages .resumePage__top,
+.main .container .pages .resumePage__bottom > div {
+  flex-basis: calc(50% - 32px);
 }
-
-.skill__level--printDesign:after {
-  width: 75%;
-}
-
-.skill__level--htmlDesign:after {
-  width: 90%;
-}
-
-.skill__level--cssDesign:after {
-  width: 85%;
-}
-
-.skill__level--javascriptDesign:after {
-  width: 70%;
-}
-
-/* change to servicesPage section */
-.servicesPage__subtitle {
+.main .container .pages .servicesPage__subtitle {
   font-size: 1.5rem;
 }
-
-.servicesPage__subtitle--highlight {
+.main .container .pages .servicesPage__subtitle--highlight {
   color: #ffb758;
 }
-
-.servicesItems {
+.main .container .pages .servicesItems {
   display: flex;
   margin: auto;
   justify-content: space-between;
 }
-
-.servicesItem {
+.main .container .pages .servicesItems .servicesItem {
   text-align: center;
 }
-.sevices__logo {
+.main .container .pages .servicesItems .servicesItem__logo {
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: content-box;
   width: 80px;
   height: 80px;
-  margin: 10px 10px;
+  margin: 40px;
   color: rgba(0, 0, 0, 0.5);
-  background-color: rgb(209, 209, 209);
+  background-color: #d1d1d1;
   padding: 30px;
   border-radius: 100%;
 }
-
-/* change to Blog section */
-
-/* change to contactPage section */
-.contactPage__content {
+.main .container .pages .contactPage__content {
   display: flex;
-  margin: auto;
   justify-content: space-between;
 }
-
-.contactPage__subtitle {
+.main .container .pages .contactPage__content__subtitle {
   font-size: 1.5rem;
 }
-
-.contactPage__subtitle--highlight {
+.main .container .pages .contactPage__content__subtitle--highlight {
   color: #8bdf80;
 }
+.main .container .pages .contactPage__content__subContent {
+  padding: 100px;
+}
+.main .container .pages .contactPage__content > div {
+  flex-basis: calc(50% - 32px);
+}
+.main .container .footer {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: #414040;
+  margin-top: 30px;
+  z-index: 9;
+}
+.main .container .footer .jiangren {
+  color: #5ddb4d;
+}
+
+/*# sourceMappingURL=style.css.map */
