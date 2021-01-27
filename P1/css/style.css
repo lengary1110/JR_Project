@@ -23,7 +23,6 @@ body {
   padding: 1px 0;
   display: flex;
   align-items: center;
-  flex: 0 0 auto;
 }
 .main .container .navbar .nav__logo {
   flex: 0.5;
@@ -33,18 +32,18 @@ body {
   height: 70px;
   width: 70px;
 }
-.main .container .navbar .navbar-nav {
+.main .container .navbar .navbar__nav {
   list-style-type: none;
   margin: 30px;
   padding: 8px;
   overflow: hidden;
   border-radius: 5px;
 }
-.main .container .navbar .navbar-nav li {
+.main .container .navbar .navbar__nav li {
   float: left;
   border-radius: 5px;
 }
-.main .container .navbar .navbar-nav li a {
+.main .container .navbar .navbar__nav li a {
   border-radius: 5px;
   display: block;
   color: #414040;
@@ -53,7 +52,7 @@ body {
   padding: 16px;
   text-decoration: none;
 }
-.main .container .navbar .navbar-nav li a:hover {
+.main .container .navbar .navbar__nav li a:hover {
   background-color: #b4e7a0;
   font-weight: 800;
 }

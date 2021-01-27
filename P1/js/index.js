@@ -1,4 +1,3 @@
-
 let previous = '';
 let current = 'HOME';
 
@@ -30,3 +29,16 @@ const changePage = () => {
   let page = document.querySelector('#' + current);
   page.classList.add(className);  
 }
+
+const changeNavItem = () => {
+  let className = 'navItem--active';
+
+  if (previous) {
+    var previousNavItem = document.querySelector('[href="'+ previous +'"]');
+    previousNavItem.classList.remove(className);
+  }
+
+  var navItem = document.querySelector('[href="'+ current +'"]');
+  navItem.classList.add(className); 
+}
+
